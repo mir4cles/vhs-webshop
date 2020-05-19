@@ -42,7 +42,7 @@ const initialState = {
 			description:
 				"An eight-year-old troublemaker must protect his house from a pair of burglars when he is accidentally left home alone by his family during Christmas vacation.",
 			image:
-				"https://m.media-amazon.com/images/M/MV5BYTYxNGMyZTYtMjE3MS00MzNjLWFjNmYtMDk3N2FmM2JiM2M1XkEyXkFqcGdeQXVyNjY5NDU4NzI@._V1_SY1000_CR0,0,673,1000_AL_.jpg",
+				"https://m.media-amazon.com/images/M/MV5BMzFkM2YwOTQtYzk2Mi00N2VlLWE3NTItN2YwNDg1YmY0ZDNmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SY1000_CR0,0,672,1000_AL_.jpg",
 			sold: 400,
 		},
 		{
@@ -59,7 +59,7 @@ const initialState = {
 	],
 };
 
-export default function shoppingCartSliceReducer(state = initialState, action) {
+export default function productListSliceReducer(state = initialState, action) {
 	switch (action.type) {
 		// case
 		default: {
