@@ -1,0 +1,16 @@
+.ProductCard .product {
+	margin-bottom: 1rem;
+}
+
+.ProductCard .product .title {
+	margin-bottom: 0.5rem;
+}
+
+.ProductCard .tag {
+	margin-right: 0.5rem;
+	padding: 1px 4px;
+	border-radius: 5px;
+	font-size: 0.85em;
+	border: 1px solid #ddd;
+	color: #666;
+}
