@@ -6,6 +6,7 @@ export default function HomePage() {
 			<div>
 				<section>
 					<h2>Products</h2>
+					<div></div>
 				</section>
 			</div>
 		</div>
