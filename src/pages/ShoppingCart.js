@@ -5,7 +5,7 @@ import { selectShoppingCart } from "../store/selectors";
 export default function ShoppingCart() {
   const cart = useSelector(selectShoppingCart);
 
-  console.log("cart looks like:", cart);
+  //console.log("cart looks like:", cart);
 
   return (
     <div>
