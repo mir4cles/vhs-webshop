@@ -5,7 +5,7 @@ const initialState = [
 	},
 ];
 
-export default function productListSliceReducer(state = initialState, action) {
+export default function shoppingCartSliceReducer(state = initialState, action) {
 	switch (action.type) {
 		// case
 		default: {
