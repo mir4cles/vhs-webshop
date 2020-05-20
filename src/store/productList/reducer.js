@@ -59,9 +59,28 @@ const initialState = {
 	],
 };
 
+// function sortPrice(arr, field) {
+// 	return arr.sort(function (a, b) {
+// 		if (a[field] > b[field]) {
+// 			return 1;
+// 		}
+// 		if (b[field] > a[field]) {
+// 			return -1;
+// 		}
+// 		return 0;
+// 	});
+// }
+
 export default function productListSliceReducer(state = initialState, action) {
 	switch (action.type) {
-		// case
+		case "SORT_BY_PRICE": {
+			console.log("we are sorting by price");
+			return state;
+
+			// ...state.sort((productA, productB) => {
+			// 	return productB.price - productA.price;
+			// }),
+		}
 		default: {
 			return state;
 		}
