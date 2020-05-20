@@ -44,7 +44,19 @@ export default function HomePage() {
 								</select>
 							</h3>
 							<ul>
-								{tag === "all"
+								{productsWithTag.map((product) => {
+									return (
+										<ProductCard
+											key={product.id}
+											id={product.id}
+											name={product.name}
+											tags={product.tags}
+											image={product.image}
+											price={product.price}
+										/>
+									);
+								})}
+								{/* {tag === "all"
 									? products.products.map((product) => {
 											return (
 												<ProductCard
@@ -68,7 +80,7 @@ export default function HomePage() {
 													price={product.price}
 												/>
 											);
-									  })}
+									  })} */}
 							</ul>
 						</div>
 					</div>
