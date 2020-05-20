@@ -1,7 +1,11 @@
 export function emptyShoppingCart() {
-  return { type: "empty_cart" };
+  return { type: "EMPTY_CART" };
 }
 
 export function addToCart(id) {
-  return { type: "add", payload: { id: id } };
+  return { type: "ADD", payload: { id: id } };
+}
+
+export function removeFromCart(id) {
+  return { type: "REMOVE", payload: { id: id } };
 }
