@@ -21,6 +21,12 @@ export default function HomePage() {
 	// 	// }
 	// };
 
+	const allTags = products.map((product) => {
+		return product.tags;
+	});
+	const mergedTags = [].concat.apply([], allTags);
+	const uniqueTags = [...new Set(mergedTags)];
+
 	return (
 		<div>
 			<section>
@@ -29,10 +35,17 @@ export default function HomePage() {
 					Filter by
 					<select value={tag} onChange={(event) => setTag(event.target.value)}>
 						<option value="all">all</option>
-						<option value="horror">horror</option>
+						{uniqueTags.map((tag, index) => {
+							return (
+								<option key={index} value={tag}>
+									{tag}
+								</option>
+							);
+						})}
+						{/* <option value="horror">horror</option>
 						<option value="comedy">comedy</option>
 						<option value="animation">animation</option>
-						<option value="drama">drama</option>
+						<option value="drama">drama</option> */}
 						Sort by
 					</select>
 				</div>
