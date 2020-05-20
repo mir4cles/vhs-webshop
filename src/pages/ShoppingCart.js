@@ -1,11 +1,19 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { selectShoppingCart } from "../store/selectors";
+import { emptyShoppingCart } from "../store/shoppingCart/actions";
 
 export default function ShoppingCart() {
   const cart = useSelector(selectShoppingCart);
+  const totalPriceArray = cart.map((item) => {
+    return item.product.price * item.quantity;
+  });
 
-  //console.log("cart looks like:", cart);
+  const dispatch = useDispatch();
+  //   console.log("cart looks like:", totalPriceArray);
+  function emptyCart() {
+    dispatch(emptyShoppingCart());
+  }
 
   return (
     <div>
@@ -32,8 +40,20 @@ export default function ShoppingCart() {
                   </tr>
                 );
               })}
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  {cart.length
+                    ? "€" +
+                      totalPriceArray.reduce((acc, current) => acc + current)
+                    : ""}
+                </td>
+              </tr>
             </tbody>
           </table>
+          <button onClick={emptyCart}>Empty cart</button>
         </section>
       </div>
     </div>
