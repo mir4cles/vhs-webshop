@@ -21,7 +21,7 @@ const initialState = {
 				"A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.",
 			image:
 				"https://m.media-amazon.com/images/M/MV5BMDdmZGU3NDQtY2E5My00ZTliLWIzOTUtMTY4ZGI1YjdiNjk3XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SY1000_CR0,0,671,1000_AL_.jpg",
-			sold: 20,
+			sold: 2000,
 		},
 		{
 			id: 3,
@@ -54,14 +54,13 @@ const initialState = {
 				"A cyborg, identical to the one who failed to kill Sarah Connor, must now protect her teenage son, John Connor, from a more advanced and powerful cyborg.",
 			image:
 				"https://m.media-amazon.com/images/M/MV5BMGU2NzRmZjUtOGUxYS00ZjdjLWEwZWItY2NlM2JhNjkxNTFmXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SY999_CR0,0,672,999_AL_.jpg",
-			sold: 500,
+			sold: 20,
 		},
 	],
 };
 
 export default function productListSliceReducer(state = initialState, action) {
 	switch (action.type) {
-		// case
 		default: {
 			return state;
 		}
