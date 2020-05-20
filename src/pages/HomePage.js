@@ -2,8 +2,10 @@ import React, { useState, useDebugValue } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { selectProducts } from "../store/productList/selectors";
 import ProductCard from "../components/ProductCard";
+import AddToCart from "../components/AddToCartButtons";
 
 export default function HomePage() {
+
 	const [tag, setTag] = useState("all");
 	const [sort, setSort] = useState("popularity");
 
@@ -61,4 +63,5 @@ export default function HomePage() {
 			</section>
 		</div>
 	);
+
 }
