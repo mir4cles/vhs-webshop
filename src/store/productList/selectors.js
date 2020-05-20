@@ -9,3 +9,7 @@ export const selectProducts = (tag, sort) => (state) => {
 		});
 	}
 };
+
+export const selectProduct = (productId) => (state) => {
+	return state.productList.products.find((product) => product.id == productId);
+};
