@@ -56,47 +56,8 @@ export default function HomePage() {
 								/>
 							);
 						})}
-						{/* {tag === "all"
-									? products.products.map((product) => {
-											return (
-												<ProductCard
-													key={product.id}
-													id={product.id}
-													name={product.name}
-													tags={product.tags}
-													image={product.image}
-													price={product.price}
-												/>
-											);
-									  })
-									: productsWithTag.map((product) => {
-											return (
-												<ProductCard
-													key={product.id}
-													id={product.id}
-													name={product.name}
-													tags={product.tags}
-													image={product.image}
-													price={product.price}
-												/>
-											);
-									  })} */}
 					</ul>
 				</div>
-				{/* <div>
-						{products.products.map((product) => {
-							return (
-								<ProductCard
-									key={product.id}
-									id={product.id}
-									name={product.name}
-									tags={product.tags}
-									image={product.image}
-									price={product.price}
-								/>
-							);
-						})}
-					</div> */}
 			</section>
 		</div>
 	);
