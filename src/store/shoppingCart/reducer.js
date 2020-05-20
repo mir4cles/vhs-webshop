@@ -11,7 +11,9 @@ const initialState = [
 
 export default function shoppingCartSliceReducer(state = initialState, action) {
   switch (action.type) {
-    // case
+    case "empty_cart": {
+      return [];
+    }
     default: {
       return state;
     }
