@@ -14,6 +14,19 @@ export default function shoppingCartSliceReducer(state = initialState, action) {
     case "empty_cart": {
       return [];
     }
+    case "add": {
+      console.log("product with id:", action.payload.id, "was added");
+      return [...state].map((item) => {
+        if (item.product === action.payload.id) {
+          return { ...item, quantity: item.quantity + 1 };
+        } else {
+          return { ...item };
+        }
+
+        //console.log(item);
+      });
+      //console.log("newState is:", newState);
+    }
     default: {
       return state;
     }
