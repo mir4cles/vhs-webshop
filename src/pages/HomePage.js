@@ -2,30 +2,17 @@ import React, { useState, useDebugValue } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { selectProducts } from "../store/productList/selectors";
 import ProductCard from "../components/ProductCard";
-// import { sortByPrice, sortByPopularity } from "../store/productList/actions";
 
 export default function HomePage() {
-	// const dispatch = useDispatch();
 	const [tag, setTag] = useState("all");
 	const [sort, setSort] = useState("popularity");
 
 	const products = useSelector(selectProducts(tag, sort));
-	// console.log("products are", products);
-
-	// const sortByInput = (event) => {
-	// 	console.log(event);
-	// 	// if (sort === "popularity") {
-	// 	// 	dispatch(sortByPopularity);
-	// 	// } else {
-	// 	// 	dispatch(sortByPrice);
-	// 	// }
-	// };
 
 	const allTags = products.map((product) => {
 		return product.tags;
 	});
-	const mergedTags = [].concat.apply([], allTags);
-	const uniqueTags = [...new Set(mergedTags)];
+	const uniqueTags = [...new Set([].concat.apply([], allTags))];
 
 	return (
 		<div>
@@ -42,10 +29,6 @@ export default function HomePage() {
 								</option>
 							);
 						})}
-						{/* <option value="horror">horror</option>
-						<option value="comedy">comedy</option>
-						<option value="animation">animation</option>
-						<option value="drama">drama</option> */}
 						Sort by
 					</select>
 				</div>
