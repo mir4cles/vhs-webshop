@@ -16,13 +16,15 @@ export default function shoppingCartSliceReducer(state = initialState, action) {
     }
     case "ADD": {
       //   console.log("product with id:", action.payload.id, "was added");
-      return [...state].map((item) => {
-        if (item.product === action.payload.id) {
-          return { ...item, quantity: item.quantity + 1 };
-        } else {
-          return { ...item };
-        }
-      });
+      if (state.find((item) => item.product === action.payload.id)) {
+        return state.map((item) =>
+          item.product === action.payload.id
+            ? { ...item, quantity: item.quantity + 1 }
+            : item
+        );
+      } else {
+        return [...state, { product: action.payload.id, quantity: 1 }];
+      }
     }
     case "REMOVE": {
       const specificProduct = state.find(
